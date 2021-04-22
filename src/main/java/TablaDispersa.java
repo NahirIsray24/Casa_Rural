@@ -15,10 +15,10 @@ public class TablaDispersa {
     static final int TAMTABLA =101;
     private int numElementos;
     private double factorCarga;
-    private casaR[] tabla;
+    private casaRclass[] tabla;
     //inicializacion de la tabla
     public TablaDispersa(){
-        tabla= new casaR[TAMTABLA];
+        tabla= new casaRclass[TAMTABLA];
         int i;
         for (i=0; i<TAMTABLA;i++){
             tabla[i]=null;
@@ -55,7 +55,7 @@ public class TablaDispersa {
     
 
     //inserccion
-    public void insertar(casaR r){
+    public void insertar(casaRclass r){
         int pos; 
         pos= direccion(r.getCodigo());
         tabla[pos]=r;
