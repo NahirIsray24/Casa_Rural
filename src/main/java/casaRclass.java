@@ -27,10 +27,7 @@ public class casaRclass {
          System.out.println("INGRESE EL PRECIO POR DIA DE LA ESTADIA");
          precio= entrada.nextDouble();
     }
-    //metodo para devolver el valor del codigo
-    public String coodigo(){
-        return codigo;
-    }
+    
     //metodo para mostrar los ingresos
     public void muestra(){
         
@@ -56,6 +53,7 @@ public class casaRclass {
    
       
   //get y set
+    //metodo para devolver el codigo
     public String getCodigo() {
         return codigo;
     }
