@@ -15,10 +15,10 @@ public class TablaDispersa {
     static final int TAMTABLA =101;
     private int numElementos;
     private double factorCarga;
-    private casaRclass[] tabla;
+    private casaR[] tabla;
     //inicializacion de la tabla
     public TablaDispersa(){
-        tabla= new casaRclass[TAMTABLA];
+        tabla= new casaR[TAMTABLA];
         int i;
         for (i=0; i<TAMTABLA;i++){
             tabla[i]=null;
@@ -33,7 +33,7 @@ public class TablaDispersa {
         d= transformarClav(clave);
         // aplica aritmética modular para obtener dirección base
         p = (int)(d%TAMTABLA);
-        while(tabla[p]!=null && tabla[p].coodigo().equals(clave)){
+        while(tabla[p]!=null && tabla[p].getCodigo().equals(clave)){
             i++;
             p=p+i*i;
             p=p%TAMTABLA;
@@ -55,9 +55,9 @@ public class TablaDispersa {
     
 
     //inserccion
-    public void insertar(casaRclass r){
+    public void insertar(casaR r){
         int pos; 
-        pos= direccion(r.coodigo());
+        pos= direccion(r.getCodigo());
         tabla[pos]=r;
         numElementos++;
         factorCarga=(double)numElementos/TAMTABLA;
