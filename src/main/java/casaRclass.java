@@ -10,29 +10,30 @@ public class casaRclass {
     private int numhabitacion=0;
     private Double precio=0.0;
     boolean esAlta;
+    //atributo esAlta, que si está activo (true)indica que es un alta; (false) se dio de baja.
     public casaRclass(){
         esAlta=true;
         asigna();
     }
+    //metodo para asignar valores de la casa
     public void asigna(){
          Scanner entrada= new Scanner(System.in);
         System.out.println("INGRESE EL CODIGO (5 CARACTERES)");
-        codigo= entrada.nextLine();
+        codigo= entrada.next();
          System.out.println("INGRESE LA POBLACION");
-         poblacion= entrada.nextLine();
+         poblacion= entrada.next();
         System.out.println("INGRESE LA DIRECCION");
-         direccion= entrada.nextLine();
+         direccion= entrada.next();
          System.out.println("INGRESE NUMERO/S DE HABITACION");
          numhabitacion= entrada.nextInt();
          System.out.println("INGRESE EL PRECIO POR DIA DE LA ESTADIA");
          precio= entrada.nextDouble();
     }
-    
-    //metodo para mostrar los ingresos
+   
+    //metodo para mostrar los valores ingresados ingresos
     public void muestra(){
-        
-        System.out.println("CASA RURAL: "+codigo);
-         System.out.println("NUMERO/S DE HABITACION: "+ numhabitacion);
+          System.out.println("CASA RURAL: "+codigo);
+          System.out.println("NUMERO/S DE HABITACION: "+ numhabitacion);
           System.out.println("POBLACION DE LA CASA: "+poblacion);
           System.out.println("DIRECCION DE LA CASA: "+direccion);
           System.out.println("PRECIO POR DIA: "+precio);
@@ -53,13 +54,13 @@ public class casaRclass {
    
       
   //get y set
-    //metodo para devolver el codigo
+    //metodo para devolver el valor del codigo
     public String getCodigo() {
         return codigo;
     }
 
     public void setCodigo(String codigo) {
-        this.codigo = codigo; //retorno del codigo: clave
+        this.codigo = codigo; //al atributo le da el valor de codigo
     }
 
     public String getPoblacion() {
